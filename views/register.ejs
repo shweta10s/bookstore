@@ -1,0 +1,29 @@
+<%- include('./partials/header')%>
+
+<%- include('./partials/nav')%>
+
+    <div id="main-user-reg" class="my-2 w-100 d-flex flex-column justify-content-center align-items-center ">
+      <h1 class="">Register User</h1> 
+
+    <form action="/register" method="post" class="form-control w-50 d-flex flex-column align-items-center justify-content-between">
+        <label for="" class="w-50 text-md">Full Name</label>
+        <input class="w-50 p-1" type="text" name="fullname" placeholder="Full Name">
+        <br>
+        <label for="" class="w-50 text-md">Emp ID</label>
+        <input class="w-50 p-1" type="text" name="empid" placeholder="Emp ID">
+        <br>
+      <label for="" class="w-50 text-md">User Name</label>
+        <input class="w-50 p-1" type="text" name="username" placeholder="User Name">
+        <br>
+        <label for="" class="w-50 text-md">Email ID</label>
+        <input class="w-50 p-1" type="email" name="username" placeholder="Email ID">
+        <br>
+        <label for="" class="w-50 text-md">Password</label>
+        <input class="w-50 p-1" type="password" name="password" placeholder="Password">
+<br>
+      <a href="/login" class="btn btn-primary w-50">Register</a>
+    </form>
+    </div>
+
+<%- include('./partials/footer')%>
+

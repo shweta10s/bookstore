@@ -1,0 +1,54 @@
+<%- include('./partials/header')%>
+
+<%- include('./partials/nav')%>
+
+<div id="main-reg" class="">
+
+    <div id="back2" class="d-flex justify-content-start align-items-center py-3">
+        <a href="/library" class="text-decoration-none text-dark">
+         <i class="ri-arrow-left-line fs-1 ps-4"></i>
+        </a>
+     <h1 class="px-4">Register New Books</h1>
+     </div>
+    <!-- <h1 class="mb-4"></h1>  -->
+    
+<!-- <a href="/create-book" class="bg-primary border-0 rounded py-2 p-4 ">Register New Book</a> -->
+
+<form action="/createbook" method="post" class="form-control w-75">
+    
+    <label for="" class="w-50">Upload File</label>
+    <input class="p-1" type="file" name="file" placeholder="Upload File">
+    <br>
+    <br>
+    <label for="" class="w-50">Book Name</label>
+    <input class="p-1" type="text" name="bookname" placeholder="Book Name">
+    <br>
+    <br>
+    <label for="" class="w-50">Author Name</label>
+    <input class="p-1" type="text" name="author" placeholder="Author Name">
+    <br>
+    <br>
+    <label for="" class="w-50">Category</label>
+    <input class="p-1" type="text" name="category" placeholder="Category">
+    <br>
+    <br>
+    <label for="" class="w-50">Language</label>
+    <input class="p-1" type="text" name="language" placeholder="Language">
+    <br>
+    <br>
+    <label for="" class="w-50">ISBN</label>
+    <input class="p-1" type="text" name="isbn" placeholder="ISBN">
+    <br>
+    <br>
+    <label for="" class="w-50">Description</label>
+    <textarea class="p-1" name="desc" placeholder="Write the description of book"></textarea>
+    <br>
+    <br>
+    <a href="/library" class="btn btn-primary">Add to Library</a>
+</form>
+
+</div>
+
+  <%- include('./partials/footer')%>
+  
+  
