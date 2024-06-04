@@ -1,16 +1,23 @@
 <%- include('./partials/header')%>
 
-<%- include('./partials/nav')%>
 
-   <div class="bg-image d-flex text-white text-center align-items-center justify-content-center"> 
-      <div id="content" class="d-flex flex-column align-items-center justify-content-center m-5 ">
+<link rel="stylesheet" href="/stylesheets/style.css">
+<div class="container-home
+">
+   <%- include('./partials/nav')%>
+
+
+   <div id="bg-image" class="d-flex text-white text-center align-items-center justify-content-center">  
+      <div id="content" class="d-flex flex-column align-items-center justify-content-center m-5 p-5">
          
-         <h1 class="m-3">Welcome to BookStore</h1>
+         <h1 class="mt-5">Welcome to BookStore</h1>
          <p class="m-3 w-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem dolore quos quidem minima culpa. Quam delectus eum corporis dolores. Deleniti facilis, corporis tempore qui nam perspiciatis repudiandae id dolor recusandae sunt ex totam numquam, enim, quod laboriosam non eum dolorum.</p>
          <a href="/library" class="btn btn-light m-3">Explore More</a>
          
       </div>
    </div>
+
+</div>
 
 
 <%- include('./partials/footer')%>
