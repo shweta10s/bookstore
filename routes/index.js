@@ -12,8 +12,15 @@ router.get('/about', function(req, res) {
   res.render('about', {title: 'About | BookStore'});
 });
 
-router.get('/library', function(req, res) {
-  res.render('library', {title: 'Library | BookStore'});
+router.get('/library', async function(req, res) {
+try{
+  const books = await BookCollection.find()
+  res.render('library', {title: 'Library | BookStore', books: books});
+}
+catch(error){
+  console.log(error);
+  res.send(error);
+}
 });
 
 router.get('/create-book', function(req, res) {
@@ -33,8 +40,15 @@ router.post('/createbook', async function(req, res) {
   }
 });
 
-router.get('/details', function(req, res) {
-  res.render('details', {title: 'Details | BookStore'});
+router.get('/details/:id', async function(req, res) {
+  try{
+const book = await BookCollection.findById(req.params.id)
+    res.render('details', {title: 'Details | BookStore', book: book});
+  }
+catch(error){
+  console.log(error);
+  res.send(error);
+}
 });
 
 router.get('/update', function(req, res) {
