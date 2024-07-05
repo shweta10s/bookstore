@@ -2,9 +2,18 @@
 
 <%- include('./partials/nav')%>
 
+<div id="content" class="d-flex flex-column align-items-center justify-content-center m-5 p-5">
+         
+    <h1 class="mt-5">About BookStore</h1>
+    <p class="m-3 w-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem dolore quos quidem minima culpa. Quam delectus eum corporis dolores. Deleniti facilis, corporis tempore qui nam perspiciatis repudiandae id dolor recusandae sunt ex totam numquam, enim, quod laboriosam non eum dolorum.</p>
 
-<h1>About Page</h1>
-
+    <h1>Subscribe our Newsletter</h1>
+    <form action="/send-mail" method="post" class="d-flex justify-content-center align-items-center">
+        <input class="p-2 m-2" type="email" placeholder="Enter your email here">
+        <a href="/library" class="btn btn-primary m-2">Submit</a>
+    </form>
+    
+ </div>
 
 <%- include('./partials/footer')%>
 

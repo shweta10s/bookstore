@@ -15,7 +15,7 @@
                 <small>Created At- <%= book.createdAt.toLocaleTimeString() %></small> 
             <small><%= book.createdAt.toLocaleDateString() %></small> 
             </div>
-            <a href="/update" class="btn btn-primary w-100 mt-3">Update Book</a>
+            <a href="/update/<%= book._id%>" class="btn btn-primary w-100 mt-3">Update Book</a>
 
         </div>
         

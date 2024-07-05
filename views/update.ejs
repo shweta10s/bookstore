@@ -13,11 +13,11 @@
 
       <div id="card-det" class="w-50 h-100 px-5 d-flex align-items-center  justify-content-center">
         <div class="card " style="width:18rem ">
-            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+            <img src="<%= book.file %>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h4 class="card-title"><u>Book Name</u></h4>
-              <h6>Author Name 01</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="card-title"><u><%= book.bookname %></u></h4>
+              <h6><%= book.author %></h6>
+              <p class="card-text"><%= book.desc.slice(0, 80) %>... %></p>
           </div>
         </div>
     </div>
@@ -25,35 +25,35 @@
     <form action="/createbook" method="post" class="form-control w-50 h-100">
     
         <label for="" class="w-50">Upload File</label>
-        <input class="p-1" type="url" name="file" placeholder="Upload File" value="file 01" >
+        <input class="p-1" type="url" name="file" placeholder="Upload File" value="<%= book.file %>" >
         <br>
         <br>
         <label for="" class="w-50">Book Title 01</label>
-        <input class="p-1" type="text" name="bookname" placeholder="Book Name" value="Book title 01">
+        <input class="p-1" type="text" name="bookname" placeholder="Book Name" value="<%= book.bookname %>">
         <br>
         <br>
         <label for="" class="w-50">Author Name</label>
-        <input class="p-1" type="text" name="author" placeholder="Author Name" value="author Name">
+        <input class="p-1" type="text" name="author" placeholder="Author Name" value="<%= book.author %>">
         <br>
         <br>
         <label for="" class="w-50">Category</label>
-        <input class="p-1" type="text" name="category" placeholder="Category" value="Category">
+        <input class="p-1" type="text" name="category" placeholder="Category" value="<%= book.category %>">
         <br>
         <br>
         <label for="" class="w-50">Price</label>
-        <input class="p-1" type="number" name="price" placeholder="Price" value="Price">
+        <input class="p-1" type="number" name="price" placeholder="Price" value="<%= book.price %>">
         <br>
         <br>
         <label for="" class="w-50">isbn</label>
-        <input class="p-1" type="text" name="isbn" placeholder="ISBN" value="ISBN 01">
+        <input class="p-1" type="text" name="isbn" placeholder="ISBN" value="<%= book.isbn %>">
         <br>
         <br>
         <label for="" class="w-50">Description</label>
-    <textarea class="p-1" name="desc" placeholder="Write the description of book"></textarea>
+    <textarea class="p-1" name="desc" placeholder="Write the description of book"><%= book.desc %></textarea>
     <br>
         <br>
         <a href="/library" class="btn btn-primary">Update Book</a>
-        <a href="/delete" class="btn btn-danger">Delete Book</a>
+        <a href="/delete/<%= book._id %>" class="btn btn-danger">Delete Book</a>
 
     </form>
     
